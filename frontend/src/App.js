@@ -680,6 +680,79 @@ function IndustrySection() {
   );
 }
 
+/* ─── Languages Section ─── */
+function LanguagesSection() {
+  const languages = [
+    { name: "English", level: "C2", pct: 100 },
+    { name: "Hindi", level: "C2", pct: 100 },
+    { name: "Kannada", level: "C2", pct: 100 },
+    { name: "Gujarati", level: "B1", pct: 55 },
+    { name: "Telugu", level: "B1", pct: 55 },
+    { name: "Urdu", level: "B1", pct: 55 },
+    { name: "German", level: "A2", pct: 30 },
+    { name: "Japanese", level: "A2", pct: 30 },
+  ];
+
+  const levelColor = (level) => {
+    if (level === "C2") return "#ff6a00";
+    if (level === "B1") return "#0b0b0b";
+    return "#6b6b6b";
+  };
+
+  return (
+    <section data-testid="languages-section" className="section-padding" style={{ background: '#fafafa' }}>
+      <div className="container-main">
+        <RevealSection>
+          <p className="font-body" style={{ color: '#ff6a00', fontWeight: 600, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>Languages</p>
+          <h2
+            className="font-heading"
+            style={{
+              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+              fontWeight: 800,
+              color: '#0b0b0b',
+              letterSpacing: '-0.02em',
+            }}
+            data-testid="languages-headline"
+          >
+            I Speak, Read, & Write in
+          </h2>
+        </RevealSection>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5 mt-12">
+          {languages.map((lang, i) => (
+            <RevealSection key={lang.name} delay={Math.min(i % 4 + 1, 8)}>
+              <div className="lang-card" data-testid={`lang-card-${i}`}>
+                <div className="flex items-center justify-between mb-3">
+                  <span className="font-heading" style={{ fontWeight: 700, fontSize: '1rem', color: '#0b0b0b' }}>
+                    {lang.name}
+                  </span>
+                  <span
+                    className="font-heading"
+                    style={{
+                      fontWeight: 800,
+                      fontSize: '0.75rem',
+                      color: levelColor(lang.level),
+                      background: lang.level === "C2" ? 'rgba(255,106,0,0.08)' : lang.level === "B1" ? 'rgba(0,0,0,0.04)' : 'rgba(0,0,0,0.03)',
+                      padding: '0.2rem 0.5rem',
+                      borderRadius: '6px',
+                      letterSpacing: '0.05em',
+                    }}
+                  >
+                    {lang.level}
+                  </span>
+                </div>
+                <div className="lang-bar-track">
+                  <div className="lang-bar-fill" style={{ width: `${lang.pct}%`, background: levelColor(lang.level) }} />
+                </div>
+              </div>
+            </RevealSection>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ─── What I Build Section ─── */
 function WhatIBuildSection() {
   const items = [
