@@ -445,7 +445,6 @@ function ExpertiseSection() {
     { name: "Marketing Strategy", icon: Target, color: "#ff6a00" },
     { name: "Growth Marketing", icon: TrendingUp, color: "#e85d00" },
     { name: "Demand Generation", icon: Zap, color: "#ff6a00" },
-    { name: "Content Marketing", icon: FileText, color: "#e85d00" },
     { name: "Performance Marketing", icon: BarChart3, color: "#ff6a00" },
     { name: "Event Marketing", icon: CalendarDays, color: "#e85d00" },
     { name: "Copywriting", icon: PenTool, color: "#ff6a00" },
