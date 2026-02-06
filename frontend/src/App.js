@@ -106,7 +106,7 @@ function Navigation() {
           <a
             href="#"
             data-testid="logo-link"
-            className="font-heading text-xl font-800 tracking-tight"
+            className="font-heading text-xl font-800 tracking-tight flex items-center"
             style={{ color: '#0b0b0b', textDecoration: 'none' }}
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
