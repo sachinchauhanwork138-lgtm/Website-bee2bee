@@ -72,25 +72,43 @@ function RevealSection({ children, className = "", delay = 0 }) {
 function Navigation() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+      // Determine active section
+      const sections = [
+        { id: "expertise", offset: document.getElementById("expertise")?.offsetTop || 99999 },
+        { id: "work", offset: document.getElementById("work")?.offsetTop || 99999 },
+      ];
+      const scrollPos = window.scrollY + 200;
+      let current = "home";
+      for (const s of sections) {
+        if (scrollPos >= s.offset) current = s.id;
+      }
+      setActiveSection(current);
+    };
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { label: "Work", href: "#work" },
-    { label: "Experience", href: "#experience" },
-    { label: "Expertise", href: "#expertise" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "#top", section: "home" },
+    { label: "My Expertise", href: "#expertise", section: "expertise" },
+    { label: "My Portfolio", href: "#work", section: "work" },
   ];
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);
-    const el = document.querySelector(href);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (href === "#top") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const el = document.querySelector(href);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -114,13 +132,13 @@ function Navigation() {
             <span className="ml-2">bee<span style={{ color: '#ff6a00' }}>2</span>bee</span>
           </a>
 
-          <div className="hidden md:flex items-center gap-8" data-testid="desktop-nav-links">
+          <div className="hidden md:flex items-center gap-2" data-testid="desktop-nav-links">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
-                className="nav-link"
-                data-testid={`nav-${link.label.toLowerCase()}`}
+                className={`nav-pill ${activeSection === link.section ? 'nav-pill-active' : ''}`}
+                data-testid={`nav-${link.section}`}
                 onClick={(e) => handleNavClick(e, link.href)}
               >
                 {link.label}
@@ -153,8 +171,8 @@ function Navigation() {
             <a
               key={link.label}
               href={link.href}
-              className="mobile-nav-link"
-              data-testid={`mobile-nav-${link.label.toLowerCase()}`}
+              className={`mobile-nav-link ${activeSection === link.section ? 'mobile-nav-active' : ''}`}
+              data-testid={`mobile-nav-${link.section}`}
               onClick={(e) => handleNavClick(e, link.href)}
             >
               {link.label}
