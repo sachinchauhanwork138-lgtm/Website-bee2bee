@@ -198,6 +198,16 @@ function HeroSection() {
       <div className="container-main w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
           <div className="flex-1 max-w-2xl">
+            {/* Hello badge */}
+            <div className="hero-badge" data-testid="hero-hello-badge">
+              <span className="hello-pill">Hello!</span>
+              <svg width="24" height="28" viewBox="0 0 24 28" fill="none" style={{ marginLeft: '4px', marginTop: '-8px' }}>
+                <path d="M6 20C8 14 10 10 12 4" stroke="#ffb380" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M10 22C13 16 15 12 18 6" stroke="#ffb380" strokeWidth="2.5" strokeLinecap="round" />
+                <path d="M15 22C17 17 19 14 22 10" stroke="#ffb380" strokeWidth="2.5" strokeLinecap="round" />
+              </svg>
+            </div>
+
             <h1
               className="hero-headline font-heading"
               style={{
@@ -206,11 +216,12 @@ function HeroSection() {
                 lineHeight: 1.08,
                 letterSpacing: '-0.03em',
                 color: '#0b0b0b',
+                marginTop: '1rem',
               }}
               data-testid="hero-headline"
             >
-              Hello! I'm Sachin,<br />
-              Your <span className="accent-underline">Marketing</span> Specialist
+              I'm <span style={{ color: '#ff6a00' }}>Sachin</span>,<br />
+              Your <span className="accent-underline">Marketing Specialist</span>
             </h1>
 
             <p
