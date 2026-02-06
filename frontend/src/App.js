@@ -966,6 +966,7 @@ function App() {
       <ExpertiseSection />
       <ExperienceSection />
       <IndustrySection />
+      <LanguagesSection />
       <WhatIBuildSection />
       <div className="section-divider" />
       <ClosingSection />
