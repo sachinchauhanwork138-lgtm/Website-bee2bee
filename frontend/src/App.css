@@ -33,6 +33,28 @@
 .reveal-delay-7 { transition-delay: 0.7s !important; }
 .reveal-delay-8 { transition-delay: 0.8s !important; }
 
+/* Hero Hello badge */
+.hero-badge {
+  display: inline-flex;
+  align-items: flex-end;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: heroEntrance 1s cubic-bezier(0.16, 1, 0.3, 1) 0.05s forwards;
+}
+
+.hello-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.25rem;
+  border: 2px solid #0b0b0b;
+  border-radius: 16px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #0b0b0b;
+  letter-spacing: 0.01em;
+}
+
 /* Hero entrance */
 .hero-headline {
   opacity: 0;
