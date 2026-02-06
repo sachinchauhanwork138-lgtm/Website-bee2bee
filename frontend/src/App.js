@@ -110,7 +110,8 @@ function Navigation() {
             style={{ color: '#0b0b0b', textDecoration: 'none' }}
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            bee<span style={{ color: '#ff6a00' }}>2</span>bee
+            <img src={LOGO_IMG} alt="bee2bee" style={{ height: '40px', width: '40px', objectFit: 'contain', borderRadius: '8px' }} />
+            <span className="ml-2">bee<span style={{ color: '#ff6a00' }}>2</span>bee</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8" data-testid="desktop-nav-links">
