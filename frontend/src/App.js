@@ -797,13 +797,8 @@ function ClosingSection() {
             </RevealSection>
 
             <RevealSection delay={3}>
-              <div className="mt-8 flex flex-wrap gap-4 items-center">
-                <a href="mailto:hello@bee2bee.com" className="btn-accent" data-testid="contact-me-btn">
-                  Contact Me <ArrowUpRight size={18} className="ml-2" />
-                </a>
-                <span className="font-body" style={{ color: '#6b6b6b', fontSize: '0.85rem' }}>
-                  or reach out at <a href="mailto:hello@bee2bee.com" style={{ color: '#0b0b0b', fontWeight: 600, textDecoration: 'none', borderBottom: '1px solid rgba(0,0,0,0.2)' }}>hello@bee2bee.com</a>
-                </span>
+              <div className="mt-10">
+                {/* HubSpot Form Placeholder */}
               </div>
             </RevealSection>
           </div>
