@@ -339,8 +339,8 @@ function PhilosophySection() {
                 }}
                 data-testid="philosophy-headline"
               >
-                Marketing is not content.<br />
-                Marketing is <span style={{ color: '#ff6a00' }}>leverage</span>.
+                Marketing is a <span style={{ color: '#ff6a00' }}>gamble</span>.<br />
+                I help you place the bets that win.
               </h2>
             </RevealSection>
 
@@ -356,45 +356,70 @@ function PhilosophySection() {
               <ul className="mt-8 philosophy-list" data-testid="philosophy-list">
                 <li className="philosophy-list-item">
                   <span className="philosophy-bullet" />
-                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Demand generation.</span>
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 400 }}>Demand generation.</span>
                 </li>
                 <li className="philosophy-list-item">
                   <span className="philosophy-bullet" />
-                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Pipeline infrastructure.</span>
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 400 }}>Pipeline infrastructure.</span>
                 </li>
                 <li className="philosophy-list-item">
                   <span className="philosophy-bullet" />
-                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Positioning that makes buyers choose you.</span>
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 400 }}>Positioning that makes buyers choose you.</span>
                 </li>
               </ul>
             </RevealSection>
           </div>
 
-          {/* Illustration */}
+          {/* Gambling/Strategy Illustration */}
           <RevealSection delay={2} className="flex-1 hidden lg:flex items-center justify-center">
             <div className="philosophy-illustration" data-testid="philosophy-illustration">
-              <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Abstract growth/leverage visual */}
-                <circle cx="160" cy="160" r="140" stroke="#f0f0f0" strokeWidth="1.5" />
-                <circle cx="160" cy="160" r="100" stroke="#e8e8e8" strokeWidth="1" />
-                <circle cx="160" cy="160" r="60" stroke="#e0e0e0" strokeWidth="1" />
-                {/* Ascending bars representing growth */}
-                <rect x="80" y="200" width="28" height="60" rx="6" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1" />
-                <rect x="118" y="170" width="28" height="90" rx="6" fill="#fff0e6" stroke="#ffcfa3" strokeWidth="1" />
-                <rect x="156" y="135" width="28" height="125" rx="6" fill="#ffe0c2" stroke="#ff9d4d" strokeWidth="1" />
-                <rect x="194" y="100" width="28" height="160" rx="6" fill="#ff6a00" opacity="0.15" stroke="#ff6a00" strokeWidth="1" />
-                <rect x="232" y="70" width="28" height="190" rx="6" fill="#ff6a00" opacity="0.25" stroke="#ff6a00" strokeWidth="1.5" />
-                {/* Trend line */}
-                <path d="M94 195 L132 165 L170 130 L208 95 L246 65" stroke="#ff6a00" strokeWidth="2.5" strokeLinecap="round" fill="none" />
-                <circle cx="246" cy="65" r="5" fill="#ff6a00" />
-                <circle cx="246" cy="65" r="10" fill="#ff6a00" opacity="0.15" />
-                {/* Arrow tip */}
-                <path d="M240 60 L248 63 L246 55" fill="#ff6a00" />
-                {/* Decorative dots */}
-                <circle cx="94" cy="195" r="3" fill="#e0e0e0" />
-                <circle cx="132" cy="165" r="3" fill="#ffcfa3" />
-                <circle cx="170" cy="130" r="3" fill="#ff9d4d" />
-                <circle cx="208" cy="95" r="3" fill="#ff6a00" opacity="0.6" />
+              <svg width="340" height="340" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Roulette-like target rings */}
+                <circle cx="170" cy="170" r="150" stroke="#f0f0f0" strokeWidth="1.5" strokeDasharray="8 6" />
+                <circle cx="170" cy="170" r="110" stroke="#e8e8e8" strokeWidth="1" strokeDasharray="6 4" />
+                <circle cx="170" cy="170" r="70" stroke="#ffcfa3" strokeWidth="1.5" strokeDasharray="4 3" />
+                <circle cx="170" cy="170" r="30" fill="#ff6a00" opacity="0.08" stroke="#ff6a00" strokeWidth="1.5" />
+                <circle cx="170" cy="170" r="8" fill="#ff6a00" opacity="0.35" />
+                {/* Dice 1 */}
+                <g transform="translate(60, 60) rotate(-15, 40, 40)">
+                  <rect x="10" y="10" width="60" height="60" rx="10" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
+                  <circle cx="28" cy="28" r="4" fill="#0b0b0b" />
+                  <circle cx="52" cy="28" r="4" fill="#0b0b0b" />
+                  <circle cx="40" cy="40" r="4" fill="#ff6a00" />
+                  <circle cx="28" cy="52" r="4" fill="#0b0b0b" />
+                  <circle cx="52" cy="52" r="4" fill="#0b0b0b" />
+                </g>
+                {/* Dice 2 */}
+                <g transform="translate(220, 210) rotate(12, 35, 35)">
+                  <rect x="5" y="5" width="55" height="55" rx="9" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
+                  <circle cx="22" cy="22" r="3.5" fill="#0b0b0b" />
+                  <circle cx="42" cy="22" r="3.5" fill="#0b0b0b" />
+                  <circle cx="22" cy="42" r="3.5" fill="#ff6a00" />
+                  <circle cx="42" cy="42" r="3.5" fill="#0b0b0b" />
+                </g>
+                {/* Poker chips stack */}
+                <g transform="translate(230, 70)">
+                  <ellipse cx="30" cy="40" rx="28" ry="8" fill="#e0e0e0" />
+                  <ellipse cx="30" cy="34" rx="28" ry="8" fill="#f0f0f0" stroke="#e0e0e0" strokeWidth="1" />
+                  <ellipse cx="30" cy="28" rx="28" ry="8" fill="#ffe0c2" stroke="#ffcfa3" strokeWidth="1" />
+                  <ellipse cx="30" cy="22" rx="28" ry="8" fill="#ff6a00" opacity="0.3" stroke="#ff6a00" strokeWidth="1" />
+                  <ellipse cx="30" cy="16" rx="28" ry="8" fill="#ff6a00" opacity="0.5" stroke="#ff6a00" strokeWidth="1.2" />
+                </g>
+                {/* Cards */}
+                <g transform="translate(50, 210) rotate(-8, 35, 45)">
+                  <rect x="8" y="4" width="48" height="66" rx="6" fill="#f8f8f8" stroke="#e0e0e0" strokeWidth="1" />
+                  <rect x="0" y="0" width="48" height="66" rx="6" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
+                  <text x="10" y="20" fontFamily="Manrope" fontSize="14" fontWeight="800" fill="#ff6a00">A</text>
+                  <text x="30" y="50" fontFamily="Manrope" fontSize="11" fill="#ff6a00">&#9830;</text>
+                </g>
+                {/* Arrow hitting bullseye */}
+                <line x1="80" y1="280" x2="162" y2="178" stroke="#ff6a00" strokeWidth="2" strokeLinecap="round" />
+                <polygon points="162,178 158,188 168,185" fill="#ff6a00" />
+                {/* Sparkle accents */}
+                <circle cx="290" cy="130" r="3" fill="#ff6a00" opacity="0.4" />
+                <circle cx="70" cy="170" r="2.5" fill="#ffcfa3" />
+                <circle cx="260" cy="180" r="2" fill="#ff6a00" opacity="0.3" />
+                <circle cx="130" cy="290" r="3" fill="#ffcfa3" />
               </svg>
             </div>
           </RevealSection>
