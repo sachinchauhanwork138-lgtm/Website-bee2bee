@@ -115,6 +115,35 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+/* Nav pill links with active state */
+.nav-pill {
+  position: relative;
+  color: #6b6b6b;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  padding: 0.5rem 1.1rem;
+  border-radius: 100px;
+  transition: color 0.3s ease, background 0.3s ease;
+}
+
+.nav-pill:hover {
+  color: #ff6a00;
+  background: rgba(255, 106, 0, 0.06);
+}
+
+.nav-pill-active {
+  color: #fff !important;
+  background: #ff6a00 !important;
+}
+
+.mobile-nav-active {
+  color: #ff6a00 !important;
+}
+
+/* Nav link (legacy) */
 .nav-link {
   position: relative;
   color: #6b6b6b;
