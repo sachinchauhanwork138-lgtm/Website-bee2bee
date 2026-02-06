@@ -1,6 +1,13 @@
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef } from "react";
 import "@/App.css";
-import { ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail, ChevronRight } from "lucide-react";
+import {
+  ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
+  Target, TrendingUp, Zap, FileText, BarChart3, CalendarDays,
+  PenTool, Users, Briefcase, Settings, Compass, Palette, Code,
+  Heart, DollarSign, GraduationCap, Megaphone, Shield, UserCheck, Scale, Monitor,
+  Layers, Send, Cpu, Rocket, ArrowDownToLine, Handshake,
+  LayoutDashboard, Globe, LineChart, MessageSquare, Database, Workflow
+} from "lucide-react";
 
 const PROFILE_IMG = "https://customer-assets.emergentagent.com/job_marketing-leverage/artifacts/8vav0lz0_ChatGPT%20Image%20Oct%2020%2C%202025%20at%2011_16_56%20PM.png";
 
@@ -105,7 +112,6 @@ function Navigation() {
             bee<span style={{ color: '#ff6a00' }}>2</span>bee
           </a>
 
-          {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8" data-testid="desktop-nav-links">
             {navLinks.map((link) => (
               <a
@@ -120,7 +126,6 @@ function Navigation() {
             ))}
           </div>
 
-          {/* Mobile toggle */}
           <button
             data-testid="mobile-menu-toggle"
             className="md:hidden p-2"
@@ -132,7 +137,6 @@ function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
       {mobileOpen && (
         <div className="mobile-nav-overlay" data-testid="mobile-nav-overlay">
           <button
@@ -173,7 +177,6 @@ function HeroSection() {
 
       <div className="container-main w-full">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
-          {/* Text */}
           <div className="flex-1 max-w-2xl">
             <h1
               className="hero-headline font-heading"
@@ -215,7 +218,6 @@ function HeroSection() {
             </div>
           </div>
 
-          {/* Avatar */}
           <div className="hero-avatar flex-shrink-0" data-testid="hero-avatar">
             <div
               style={{
@@ -230,7 +232,7 @@ function HeroSection() {
             >
               <img
                 src={PROFILE_IMG}
-                alt="Sachin — B2B Marketing Specialist"
+                alt="Sachin - B2B Marketing Specialist"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 data-testid="hero-profile-image"
               />
@@ -265,7 +267,7 @@ function MetricsSection() {
                   style={{
                     fontSize: 'clamp(2rem, 4vw, 3rem)',
                     fontWeight: 800,
-                    color: '#0b0b0b',
+                    color: '#ff6a00',
                     lineHeight: 1.1,
                   }}
                 >
@@ -290,54 +292,91 @@ function MetricsSection() {
 function PhilosophySection() {
   return (
     <section data-testid="philosophy-section" className="section-padding" style={{ background: '#fafafa' }}>
-      <div className="container-main" style={{ maxWidth: '800px' }}>
-        <RevealSection>
-          <h2
-            className="font-heading"
-            style={{
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-              fontWeight: 800,
-              lineHeight: 1.15,
-              color: '#0b0b0b',
-              letterSpacing: '-0.02em',
-            }}
-            data-testid="philosophy-headline"
-          >
-            Marketing is not content.<br />
-            Marketing is <span style={{ color: '#ff6a00' }}>leverage</span>.
-          </h2>
-        </RevealSection>
+      <div className="container-main">
+        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+          {/* Text content */}
+          <div className="flex-1 max-w-xl">
+            <RevealSection>
+              <h2
+                className="font-heading"
+                style={{
+                  fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+                  fontWeight: 800,
+                  lineHeight: 1.15,
+                  color: '#0b0b0b',
+                  letterSpacing: '-0.02em',
+                }}
+                data-testid="philosophy-headline"
+              >
+                Marketing is not content.<br />
+                Marketing is <span style={{ color: '#ff6a00' }}>leverage</span>.
+              </h2>
+            </RevealSection>
 
-        <RevealSection delay={2}>
-          <div className="mt-8" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.8 }}>
-            <p>Most companies don't fail because of bad products.</p>
-            <p>They fail because they never build the systems that create trust, demand, and conversion.</p>
-            <p className="mt-6" style={{ color: '#0b0b0b', fontWeight: 600 }}>I build those systems.</p>
+            <RevealSection delay={2}>
+              <div className="mt-8" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.8 }}>
+                <p>Most companies don't fail because of bad products.</p>
+                <p>They fail because they never build the systems that create trust, demand, and conversion.</p>
+                <p className="mt-6" style={{ color: '#0b0b0b', fontWeight: 600 }}>I build those systems.</p>
+              </div>
+            </RevealSection>
+
+            <RevealSection delay={3}>
+              <ul className="mt-8 philosophy-list" data-testid="philosophy-list">
+                <li className="philosophy-list-item">
+                  <span className="philosophy-bullet" />
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Demand generation.</span>
+                </li>
+                <li className="philosophy-list-item">
+                  <span className="philosophy-bullet" />
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Pipeline infrastructure.</span>
+                </li>
+                <li className="philosophy-list-item">
+                  <span className="philosophy-bullet" />
+                  <span className="font-body" style={{ fontSize: '1.05rem', color: '#0b0b0b', fontWeight: 600 }}>Positioning that makes buyers choose you.</span>
+                </li>
+              </ul>
+            </RevealSection>
           </div>
-        </RevealSection>
 
-        <RevealSection delay={3}>
-          <div
-            className="mt-8 font-body"
-            style={{
-              fontSize: '1.05rem',
-              lineHeight: 2,
-              color: '#0b0b0b',
-              fontWeight: 500,
-            }}
-            data-testid="philosophy-list"
-          >
-            <p>Demand generation.</p>
-            <p>Pipeline infrastructure.</p>
-            <p>Positioning that makes buyers choose you.</p>
-          </div>
-        </RevealSection>
+          {/* Illustration */}
+          <RevealSection delay={2} className="flex-1 hidden lg:flex items-center justify-center">
+            <div className="philosophy-illustration" data-testid="philosophy-illustration">
+              <svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Abstract growth/leverage visual */}
+                <circle cx="160" cy="160" r="140" stroke="#f0f0f0" strokeWidth="1.5" />
+                <circle cx="160" cy="160" r="100" stroke="#e8e8e8" strokeWidth="1" />
+                <circle cx="160" cy="160" r="60" stroke="#e0e0e0" strokeWidth="1" />
+                {/* Ascending bars representing growth */}
+                <rect x="80" y="200" width="28" height="60" rx="6" fill="#f5f5f5" stroke="#e0e0e0" strokeWidth="1" />
+                <rect x="118" y="170" width="28" height="90" rx="6" fill="#fff0e6" stroke="#ffcfa3" strokeWidth="1" />
+                <rect x="156" y="135" width="28" height="125" rx="6" fill="#ffe0c2" stroke="#ff9d4d" strokeWidth="1" />
+                <rect x="194" y="100" width="28" height="160" rx="6" fill="#ff6a00" opacity="0.15" stroke="#ff6a00" strokeWidth="1" />
+                <rect x="232" y="70" width="28" height="190" rx="6" fill="#ff6a00" opacity="0.25" stroke="#ff6a00" strokeWidth="1.5" />
+                {/* Trend line */}
+                <path d="M94 195 L132 165 L170 130 L208 95 L246 65" stroke="#ff6a00" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+                <circle cx="246" cy="65" r="5" fill="#ff6a00" />
+                <circle cx="246" cy="65" r="10" fill="#ff6a00" opacity="0.15" />
+                {/* Arrow tip */}
+                <path d="M240 60 L248 63 L246 55" fill="#ff6a00" />
+                {/* Decorative dots */}
+                <circle cx="94" cy="195" r="3" fill="#e0e0e0" />
+                <circle cx="132" cy="165" r="3" fill="#ffcfa3" />
+                <circle cx="170" cy="130" r="3" fill="#ff9d4d" />
+                <circle cx="208" cy="95" r="3" fill="#ff6a00" opacity="0.6" />
+              </svg>
+            </div>
+          </RevealSection>
+        </div>
 
+        {/* Center-aligned closing */}
         <RevealSection delay={4}>
-          <p className="mt-8" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.8 }}>
-            Not noise. Not vanity.<br />
-            <span style={{ color: '#0b0b0b', fontWeight: 700 }}>Real growth.</span>
-          </p>
+          <div className="mt-16 pt-10" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', textAlign: 'center' }}>
+            <p className="font-heading" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', color: '#6b6b6b', lineHeight: 1.8 }}>
+              Not noise. Not vanity.<br />
+              <span style={{ color: '#0b0b0b', fontWeight: 800, fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)' }}>Real growth.</span>
+            </p>
+          </div>
         </RevealSection>
       </div>
     </section>
@@ -347,11 +386,19 @@ function PhilosophySection() {
 /* ─── Expertise Section ─── */
 function ExpertiseSection() {
   const expertise = [
-    "Marketing Strategy", "Growth Marketing", "Demand Generation",
-    "Content Marketing", "Performance Marketing", "Event Marketing",
-    "Copywriting", "Sales & Pipeline Building", "Account Management",
-    "MarTech & Automation", "Business Strategy", "Graphic Design",
-    "HTML & CSS",
+    { name: "Marketing Strategy", icon: Target, color: "#ff6a00" },
+    { name: "Growth Marketing", icon: TrendingUp, color: "#e85d00" },
+    { name: "Demand Generation", icon: Zap, color: "#ff6a00" },
+    { name: "Content Marketing", icon: FileText, color: "#e85d00" },
+    { name: "Performance Marketing", icon: BarChart3, color: "#ff6a00" },
+    { name: "Event Marketing", icon: CalendarDays, color: "#e85d00" },
+    { name: "Copywriting", icon: PenTool, color: "#ff6a00" },
+    { name: "Sales & Pipeline Building", icon: Users, color: "#e85d00" },
+    { name: "Account Management", icon: Briefcase, color: "#ff6a00" },
+    { name: "MarTech & Automation", icon: Settings, color: "#e85d00" },
+    { name: "Business Strategy", icon: Compass, color: "#ff6a00" },
+    { name: "Graphic Design", icon: Palette, color: "#e85d00" },
+    { name: "HTML & CSS", icon: Code, color: "#ff6a00" },
   ];
 
   return (
@@ -373,16 +420,23 @@ function ExpertiseSection() {
           </h2>
         </RevealSection>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-12">
-          {expertise.map((item, i) => (
-            <RevealSection key={item} delay={Math.min(i % 4 + 1, 8)}>
-              <div className="expertise-card" data-testid={`expertise-card-${i}`}>
-                <span className="font-heading" style={{ fontWeight: 600, fontSize: '0.95rem', color: '#0b0b0b' }}>
-                  {item}
-                </span>
-              </div>
-            </RevealSection>
-          ))}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-5 mt-12">
+          {expertise.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <RevealSection key={item.name} delay={Math.min(i % 4 + 1, 8)}>
+                <div className="expertise-card-v2" data-testid={`expertise-card-${i}`}>
+                  <div className="expertise-icon-wrap">
+                    <Icon size={20} strokeWidth={1.8} />
+                  </div>
+                  <span className="font-heading" style={{ fontWeight: 600, fontSize: '0.9rem', color: '#0b0b0b', marginTop: '0.75rem', display: 'block' }}>
+                    {item.name}
+                  </span>
+                  <div className="expertise-accent-line" />
+                </div>
+              </RevealSection>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -397,30 +451,40 @@ function ExperienceSection() {
       role: "Marketing Lead",
       period: "Nov 2023 \u2013 Present",
       description: "Full-cycle marketing leadership. Built demand generation systems, positioning strategy, inbound pipeline, and revenue growth programs.",
+      tags: ["Demand Gen", "Strategy", "Pipeline", "Leadership"],
+      icon: LayoutDashboard,
     },
     {
       company: "The Global Associates",
       role: "Sr. Copywriter / Account Manager",
       period: "Dec 2022 \u2013 Nov 2023",
       description: "Led B2B demand generation for SaaS clients. Managed email campaigns, LinkedIn outreach, outbound pipeline creation, and client growth strategy.",
+      tags: ["B2B SaaS", "Email", "LinkedIn", "Outbound"],
+      icon: Globe,
     },
     {
       company: "Forefacts Inc",
       role: "Content Manager",
       period: "July 2021 \u2013 Nov 2022",
       description: "Owned content strategy, inbound marketing, editorial planning, and lead generation infrastructure.",
+      tags: ["Content", "Inbound", "Editorial", "Lead Gen"],
+      icon: LineChart,
     },
     {
       company: "EHNOTE Softlabs",
       role: "Content Writer",
       period: "Jan 2021 \u2013 July 2021",
       description: "Created whitepapers, landing pages, blog content, and product positioning materials.",
+      tags: ["Whitepapers", "Landing Pages", "Positioning"],
+      icon: MessageSquare,
     },
     {
       company: "Bajaj Finserv",
       role: "Sales Executive",
       period: "Aug 2020 \u2013 Jan 2021",
       description: "Built persuasion skills, customer acquisition experience, and real sales understanding.",
+      tags: ["Sales", "Acquisition", "Persuasion"],
+      icon: Handshake,
     },
   ];
 
@@ -443,11 +507,9 @@ function ExperienceSection() {
           </h2>
         </RevealSection>
 
-        <div className="mt-14 relative" style={{ paddingLeft: '48px' }}>
-          <div className="timeline-line" />
-
+        <div className="mt-14 space-y-0">
           {roles.map((r, i) => (
-            <TimelineItem key={r.company} role={r} index={i} />
+            <TimelineItem key={r.company} role={r} index={i} isLast={i === roles.length - 1} />
           ))}
         </div>
       </div>
@@ -455,41 +517,71 @@ function ExperienceSection() {
   );
 }
 
-function TimelineItem({ role, index }) {
+function TimelineItem({ role, index, isLast }) {
   const [ref, isVisible] = useInView({ threshold: 0.2 });
+  const Icon = role.icon;
 
   return (
     <div
       ref={ref}
-      className={`timeline-item ${isVisible ? 'visible' : ''} flex items-start gap-5 mb-12`}
+      className={`timeline-item ${isVisible ? 'visible' : ''}`}
       style={{ transitionDelay: `${index * 0.1}s` }}
       data-testid={`timeline-item-${index}`}
     >
-      <div className="timeline-dot" style={{ marginTop: '6px', marginLeft: '-42px' }} />
-      <div>
-        <h3 className="font-heading" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0b0b0b' }}>
-          {role.company}
-        </h3>
-        <p className="font-heading" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#ff6a00', marginTop: '2px' }}>
-          {role.role}
-        </p>
-        <p className="font-body" style={{ fontSize: '0.8rem', color: '#6b6b6b', fontWeight: 500, marginTop: '4px', letterSpacing: '0.02em' }}>
-          {role.period}
-        </p>
-        <p className="font-body" style={{ fontSize: '0.95rem', color: '#6b6b6b', lineHeight: 1.7, marginTop: '10px', maxWidth: '560px' }}>
-          {role.description}
-        </p>
+      <div className="timeline-row">
+        {/* Left: Timeline spine */}
+        <div className="timeline-spine">
+          <div className="timeline-dot" />
+          {!isLast && <div className="timeline-connector" />}
+        </div>
+
+        {/* Center: Content */}
+        <div className="timeline-content">
+          <h3 className="font-heading" style={{ fontSize: '1.2rem', fontWeight: 800, color: '#0b0b0b' }}>
+            {role.company}
+          </h3>
+          <p className="font-heading" style={{ fontSize: '0.95rem', fontWeight: 600, color: '#ff6a00', marginTop: '2px' }}>
+            {role.role}
+          </p>
+          <p className="font-body" style={{ fontSize: '0.8rem', color: '#6b6b6b', fontWeight: 500, marginTop: '4px', letterSpacing: '0.02em' }}>
+            {role.period}
+          </p>
+          <p className="font-body" style={{ fontSize: '0.95rem', color: '#6b6b6b', lineHeight: 1.7, marginTop: '10px' }}>
+            {role.description}
+          </p>
+        </div>
+
+        {/* Right: Decorative elements */}
+        <div className="timeline-decoration hidden lg:flex">
+          <div className="timeline-icon-badge">
+            <Icon size={22} strokeWidth={1.5} />
+          </div>
+          <div className="timeline-tags">
+            {role.tags.map((tag) => (
+              <span key={tag} className="timeline-tag">{tag}</span>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
 }
 
-/* ─── Industry Section ─── */
+/* ─── Industry Carousel Section ─── */
 function IndustrySection() {
   const industries = [
-    "HealthTech", "FinTech", "EdTech", "MarTech",
-    "CyberTech", "HRTech", "LegalTech", "AdTech",
+    { name: "HealthTech", icon: Heart },
+    { name: "FinTech", icon: DollarSign },
+    { name: "EdTech", icon: GraduationCap },
+    { name: "MarTech", icon: Megaphone },
+    { name: "CyberTech", icon: Shield },
+    { name: "HRTech", icon: UserCheck },
+    { name: "LegalTech", icon: Scale },
+    { name: "AdTech", icon: Monitor },
   ];
+
+  // Double the items for seamless infinite scroll
+  const doubledIndustries = [...industries, ...industries];
 
   return (
     <section data-testid="industry-section" className="section-padding">
@@ -509,13 +601,24 @@ function IndustrySection() {
             Sectors I've worked across.
           </h2>
         </RevealSection>
+      </div>
 
-        <div className="flex flex-wrap gap-3 mt-10">
-          {industries.map((ind, i) => (
-            <RevealSection key={ind} delay={Math.min(i + 1, 8)}>
-              <span className="industry-pill" data-testid={`industry-pill-${i}`}>{ind}</span>
-            </RevealSection>
-          ))}
+      {/* Auto-sliding carousel */}
+      <div className="industry-carousel-wrapper mt-12">
+        <div className="industry-carousel-track">
+          {doubledIndustries.map((ind, i) => {
+            const Icon = ind.icon;
+            return (
+              <div key={`${ind.name}-${i}`} className="industry-carousel-item" data-testid={i < 8 ? `industry-pill-${i}` : undefined}>
+                <div className="industry-icon-wrap">
+                  <Icon size={24} strokeWidth={1.5} />
+                </div>
+                <span className="font-heading" style={{ fontWeight: 700, fontSize: '0.95rem', color: '#0b0b0b' }}>
+                  {ind.name}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -525,54 +628,80 @@ function IndustrySection() {
 /* ─── What I Build Section ─── */
 function WhatIBuildSection() {
   const items = [
-    { title: "Demand generation systems", desc: "Systematic approaches to create and capture demand at every stage of the buyer journey." },
-    { title: "Inbound pipeline engines", desc: "Content-driven infrastructure that attracts and converts qualified prospects organically." },
-    { title: "Outbound acquisition systems", desc: "Targeted outreach frameworks that open doors with the right accounts at the right time." },
-    { title: "Product positioning frameworks", desc: "Clear, compelling narratives that make buyers understand why you're the obvious choice." },
-    { title: "Marketing automation infrastructure", desc: "Tech-enabled workflows that scale your marketing impact without scaling your team." },
-    { title: "Sales enablement systems", desc: "Content, tools, and processes that make your sales team close faster and bigger." },
-    { title: "Business growth strategy", desc: "End-to-end strategic planning that aligns marketing, sales, and product for compounding growth." },
+    { title: "Demand generation systems", desc: "Systematic approaches to create and capture demand at every stage of the buyer journey.", icon: Zap },
+    { title: "Inbound pipeline engines", desc: "Content-driven infrastructure that attracts and converts qualified prospects organically.", icon: ArrowDownToLine },
+    { title: "Outbound acquisition systems", desc: "Targeted outreach frameworks that open doors with the right accounts at the right time.", icon: Send },
+    { title: "Product positioning frameworks", desc: "Clear, compelling narratives that make buyers understand why you're the obvious choice.", icon: Layers },
+    { title: "Marketing automation infrastructure", desc: "Tech-enabled workflows that scale your marketing impact without scaling your team.", icon: Cpu },
+    { title: "Sales enablement systems", desc: "Content, tools, and processes that make your sales team close faster and bigger.", icon: Database },
+    { title: "Business growth strategy", desc: "End-to-end strategic planning that aligns marketing, sales, and product for compounding growth.", icon: Rocket },
   ];
 
   return (
     <section id="work" data-testid="work-section" className="section-padding" style={{ background: '#fafafa' }}>
       <div className="container-main">
         <RevealSection>
-          <p className="font-body" style={{ color: '#ff6a00', fontWeight: 600, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>What I Build</p>
-          <h2
-            className="font-heading"
-            style={{
-              fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
-              fontWeight: 800,
-              color: '#0b0b0b',
-              letterSpacing: '-0.02em',
-            }}
-            data-testid="work-headline"
-          >
-            I build growth infrastructure.
-          </h2>
+          <div style={{ textAlign: 'center' }}>
+            <p className="font-body" style={{ color: '#ff6a00', fontWeight: 600, fontSize: '0.85rem', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '0.75rem' }}>What I Build</p>
+            <h2
+              className="font-heading"
+              style={{
+                fontSize: 'clamp(1.75rem, 3.5vw, 2.75rem)',
+                fontWeight: 800,
+                color: '#0b0b0b',
+                letterSpacing: '-0.02em',
+              }}
+              data-testid="work-headline"
+            >
+              I build growth infrastructure.
+            </h2>
+          </div>
         </RevealSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
-          {items.map((item, i) => (
-            <RevealSection key={item.title} delay={Math.min(i % 3 + 1, 8)}>
-              <div className="value-card h-full" data-testid={`value-card-${i}`}>
-                <div className="flex items-start gap-3">
-                  <span style={{ color: '#ff6a00', marginTop: '2px', flexShrink: 0 }}>
-                    <ChevronRight size={18} strokeWidth={3} />
-                  </span>
-                  <div>
-                    <h3 className="font-heading" style={{ fontWeight: 700, fontSize: '1rem', color: '#0b0b0b' }}>
+        {/* Top row: 4 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-12">
+          {items.slice(0, 4).map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <RevealSection key={item.title} delay={i + 1}>
+                <div className="build-card h-full" data-testid={`value-card-${i}`}>
+                  <div className="build-card-icon">
+                    <Icon size={24} strokeWidth={1.5} />
+                  </div>
+                  <h3 className="font-heading mt-4" style={{ fontWeight: 700, fontSize: '1rem', color: '#0b0b0b', lineHeight: 1.3 }}>
+                    {item.title}
+                  </h3>
+                  <p className="font-body mt-2" style={{ fontSize: '0.85rem', color: '#6b6b6b', lineHeight: 1.65 }}>
+                    {item.desc}
+                  </p>
+                </div>
+              </RevealSection>
+            );
+          })}
+        </div>
+
+        {/* Bottom row: 3 cards centered */}
+        <div className="flex justify-center mt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5" style={{ maxWidth: '900px', width: '100%' }}>
+            {items.slice(4).map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <RevealSection key={item.title} delay={i + 1}>
+                  <div className="build-card h-full" data-testid={`value-card-${i + 4}`}>
+                    <div className="build-card-icon">
+                      <Icon size={24} strokeWidth={1.5} />
+                    </div>
+                    <h3 className="font-heading mt-4" style={{ fontWeight: 700, fontSize: '1rem', color: '#0b0b0b', lineHeight: 1.3 }}>
                       {item.title}
                     </h3>
-                    <p className="font-body mt-2" style={{ fontSize: '0.875rem', color: '#6b6b6b', lineHeight: 1.65 }}>
+                    <p className="font-body mt-2" style={{ fontSize: '0.85rem', color: '#6b6b6b', lineHeight: 1.65 }}>
                       {item.desc}
                     </p>
                   </div>
-                </div>
-              </div>
-            </RevealSection>
-          ))}
+                </RevealSection>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>
@@ -583,59 +712,71 @@ function WhatIBuildSection() {
 function ClosingSection() {
   return (
     <section id="contact" data-testid="contact-section" className="section-padding">
-      <div className="container-main" style={{ maxWidth: '800px' }}>
-        <RevealSection>
-          <h2
-            className="font-heading"
-            style={{
-              fontSize: 'clamp(1.75rem, 4vw, 3rem)',
-              fontWeight: 800,
-              lineHeight: 1.1,
-              color: '#0b0b0b',
-              letterSpacing: '-0.02em',
-            }}
-            data-testid="contact-headline"
-          >
-            If you're building something real,<br />
-            <span style={{ color: '#ff6a00' }}>we should talk.</span>
-          </h2>
-        </RevealSection>
+      <div className="container-main">
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
+          {/* Left: Content */}
+          <div className="flex-1 max-w-lg">
+            <RevealSection>
+              <h2
+                className="font-heading"
+                style={{
+                  fontSize: 'clamp(1.75rem, 4vw, 3rem)',
+                  fontWeight: 800,
+                  lineHeight: 1.1,
+                  color: '#0b0b0b',
+                  letterSpacing: '-0.02em',
+                }}
+                data-testid="contact-headline"
+              >
+                If you're building something real,<br />
+                <span style={{ color: '#ff6a00' }}>we should talk.</span>
+              </h2>
+            </RevealSection>
 
-        <RevealSection delay={2}>
-          <div className="mt-6" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.9 }}>
-            <p>From business to business.</p>
-            <p>From presence to pipeline.</p>
-            <p>From strategy to growth.</p>
-          </div>
-        </RevealSection>
-
-        <RevealSection delay={3}>
-          <div className="mt-10">
-            {/* HubSpot Form Placeholder */}
-            <div className="hubspot-form-container" data-testid="hubspot-form-container">
-              <div style={{ textAlign: 'center' }}>
-                <p className="font-body" style={{ color: '#6b6b6b', fontSize: '0.9rem' }}>
-                  {/* HubSpot form will be embedded here */}
-                  Contact form loading...
-                </p>
-                <p className="font-body mt-2" style={{ color: '#999', fontSize: '0.8rem' }}>
-                  Paste your HubSpot embed code to replace this placeholder
-                </p>
+            <RevealSection delay={2}>
+              <div className="mt-6" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.9 }}>
+                <p>From business to business.</p>
+                <p>From presence to pipeline.</p>
+                <p>From strategy to growth.</p>
               </div>
-            </div>
-          </div>
-        </RevealSection>
+            </RevealSection>
 
-        <RevealSection delay={4}>
-          <div className="mt-8 flex flex-wrap gap-4 items-center">
-            <a href="mailto:hello@bee2bee.com" className="btn-accent" data-testid="contact-me-btn">
-              Contact Me <ArrowUpRight size={18} className="ml-2" />
-            </a>
-            <span className="font-body" style={{ color: '#6b6b6b', fontSize: '0.85rem' }}>
-              or reach out at <a href="mailto:hello@bee2bee.com" style={{ color: '#0b0b0b', fontWeight: 600, textDecoration: 'none', borderBottom: '1px solid rgba(0,0,0,0.2)' }}>hello@bee2bee.com</a>
-            </span>
+            <RevealSection delay={3}>
+              <div className="mt-8 flex flex-wrap gap-4 items-center">
+                <a href="mailto:hello@bee2bee.com" className="btn-accent" data-testid="contact-me-btn">
+                  Contact Me <ArrowUpRight size={18} className="ml-2" />
+                </a>
+                <span className="font-body" style={{ color: '#6b6b6b', fontSize: '0.85rem' }}>
+                  or reach out at <a href="mailto:hello@bee2bee.com" style={{ color: '#0b0b0b', fontWeight: 600, textDecoration: 'none', borderBottom: '1px solid rgba(0,0,0,0.2)' }}>hello@bee2bee.com</a>
+                </span>
+              </div>
+            </RevealSection>
           </div>
-        </RevealSection>
+
+          {/* Right: HubSpot Form */}
+          <div className="flex-1 w-full">
+            <RevealSection delay={2}>
+              <div className="hubspot-form-container" data-testid="hubspot-form-container">
+                <div style={{ textAlign: 'center', width: '100%' }}>
+                  <div style={{ marginBottom: '1rem' }}>
+                    <Mail size={32} style={{ color: '#ff6a00', margin: '0 auto' }} />
+                  </div>
+                  <p className="font-heading" style={{ color: '#0b0b0b', fontSize: '1.05rem', fontWeight: 700 }}>
+                    Get in touch
+                  </p>
+                  <p className="font-body mt-2" style={{ color: '#6b6b6b', fontSize: '0.85rem', lineHeight: 1.6 }}>
+                    Paste your HubSpot form embed code here to replace this placeholder
+                  </p>
+                  <div className="mt-6" style={{ padding: '1rem', background: 'rgba(255,106,0,0.04)', borderRadius: '12px', border: '1px dashed rgba(255,106,0,0.2)' }}>
+                    <p className="font-body" style={{ color: '#999', fontSize: '0.8rem' }}>
+                      HubSpot CRM form will appear here
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </RevealSection>
+          </div>
+        </div>
       </div>
     </section>
   );
