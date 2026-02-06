@@ -789,8 +789,9 @@ function Footer() {
   return (
     <footer data-testid="footer" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', padding: '3rem 0' }}>
       <div className="container-main flex flex-col md:flex-row items-center justify-between gap-4">
-        <div>
-          <span className="font-heading" style={{ fontWeight: 800, fontSize: '1.1rem', color: '#0b0b0b' }}>
+        <div className="flex items-center">
+          <img src={LOGO_IMG} alt="bee2bee" style={{ height: '32px', width: '32px', objectFit: 'contain', borderRadius: '6px' }} />
+          <span className="font-heading ml-2" style={{ fontWeight: 800, fontSize: '1.1rem', color: '#0b0b0b' }}>
             bee<span style={{ color: '#ff6a00' }}>2</span>bee
           </span>
           <span className="font-body ml-4" style={{ color: '#6b6b6b', fontSize: '0.8rem' }}>
