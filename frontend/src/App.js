@@ -240,11 +240,11 @@ function HeroSection() {
             <div className="hero-buttons flex flex-wrap gap-4 mt-10" data-testid="hero-buttons">
               <a href="#work" className="btn-primary" data-testid="hero-view-work-btn"
                 onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                View My Work <ArrowRight size={16} className="ml-2" />
+                My Expertise <ArrowRight size={16} className="ml-2" />
               </a>
               <a href="#experience" className="btn-secondary" data-testid="hero-experience-btn"
                 onClick={(e) => { e.preventDefault(); document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' }); }}>
-                Explore My Experience
+                My Portfolio
               </a>
             </div>
           </div>
