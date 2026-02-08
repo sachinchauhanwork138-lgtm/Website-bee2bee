@@ -348,7 +348,7 @@ function PhilosophySection() {
               <div className="mt-8" style={{ color: '#6b6b6b', fontSize: '1.05rem', lineHeight: 1.8 }}>
                 <p>Most companies don't fail because of bad products.</p>
                 <p>They fail because they never build the systems that create trust, demand, and conversion.</p>
-                <p className="mt-6" style={{ color: '#0b0b0b', fontWeight: 600 }}>I build those systems.</p>
+                <p className="mt-6" style={{ color: '#0b0b0b', fontWeight: 600 }}>I build those systems:</p>
               </div>
             </RevealSection>
 
