@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "@/App.css";
-import chessImage from "./assets/chess-strategy.jpg";
+import chessImage from "./assets/pexels-pixabay-163427.jpg";
 import {
   ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
   Target, TrendingUp, Zap, FileText, BarChart3, CalendarDays,
