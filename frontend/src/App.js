@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "@/App.css";
+import chessImage from "./assets/chess-strategy.jpg";
 import {
   ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
   Target, TrendingUp, Zap, FileText, BarChart3, CalendarDays,
@@ -322,11 +323,15 @@ function MetricsSection() {
 /* ─── Philosophy Section ─── */
 function PhilosophySection() {
   return (
-    <section data-testid="philosophy-section" className="section-padding" style={{ background: '#fafafa' }}>
+    <section 
+  data-testid="philosophy-section" 
+  className="section-padding" 
+  style={{ background: '#fafafa', position: 'relative', overflow: 'hidden' }}
+>
       <div className="container-main">
         <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
           {/* Text content */}
-          <div className="flex-1 max-w-xl">
+          <div className="flex-1 max-w-xl" style={{ width: "55%" }}>
             <RevealSection>
               <h2
                 className="font-heading"
@@ -370,59 +375,28 @@ function PhilosophySection() {
             </RevealSection>
           </div>
 
-          {/* Gambling/Strategy Illustration */}
-          <RevealSection delay={2} className="flex-1 hidden lg:flex items-center justify-center">
-            <div className="philosophy-illustration" data-testid="philosophy-illustration">
-              <svg width="340" height="340" viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Roulette-like target rings */}
-                <circle cx="170" cy="170" r="150" stroke="#f0f0f0" strokeWidth="1.5" strokeDasharray="8 6" />
-                <circle cx="170" cy="170" r="110" stroke="#e8e8e8" strokeWidth="1" strokeDasharray="6 4" />
-                <circle cx="170" cy="170" r="70" stroke="#ffcfa3" strokeWidth="1.5" strokeDasharray="4 3" />
-                <circle cx="170" cy="170" r="30" fill="#ff6a00" opacity="0.08" stroke="#ff6a00" strokeWidth="1.5" />
-                <circle cx="170" cy="170" r="8" fill="#ff6a00" opacity="0.35" />
-                {/* Dice 1 */}
-                <g transform="translate(60, 60) rotate(-15, 40, 40)">
-                  <rect x="10" y="10" width="60" height="60" rx="10" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
-                  <circle cx="28" cy="28" r="4" fill="#0b0b0b" />
-                  <circle cx="52" cy="28" r="4" fill="#0b0b0b" />
-                  <circle cx="40" cy="40" r="4" fill="#ff6a00" />
-                  <circle cx="28" cy="52" r="4" fill="#0b0b0b" />
-                  <circle cx="52" cy="52" r="4" fill="#0b0b0b" />
-                </g>
-                {/* Dice 2 */}
-                <g transform="translate(220, 210) rotate(12, 35, 35)">
-                  <rect x="5" y="5" width="55" height="55" rx="9" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
-                  <circle cx="22" cy="22" r="3.5" fill="#0b0b0b" />
-                  <circle cx="42" cy="22" r="3.5" fill="#0b0b0b" />
-                  <circle cx="22" cy="42" r="3.5" fill="#ff6a00" />
-                  <circle cx="42" cy="42" r="3.5" fill="#0b0b0b" />
-                </g>
-                {/* Poker chips stack */}
-                <g transform="translate(230, 70)">
-                  <ellipse cx="30" cy="40" rx="28" ry="8" fill="#e0e0e0" />
-                  <ellipse cx="30" cy="34" rx="28" ry="8" fill="#f0f0f0" stroke="#e0e0e0" strokeWidth="1" />
-                  <ellipse cx="30" cy="28" rx="28" ry="8" fill="#ffe0c2" stroke="#ffcfa3" strokeWidth="1" />
-                  <ellipse cx="30" cy="22" rx="28" ry="8" fill="#ff6a00" opacity="0.3" stroke="#ff6a00" strokeWidth="1" />
-                  <ellipse cx="30" cy="16" rx="28" ry="8" fill="#ff6a00" opacity="0.5" stroke="#ff6a00" strokeWidth="1.2" />
-                </g>
-                {/* Cards */}
-                <g transform="translate(50, 210) rotate(-8, 35, 45)">
-                  <rect x="8" y="4" width="48" height="66" rx="6" fill="#f8f8f8" stroke="#e0e0e0" strokeWidth="1" />
-                  <rect x="0" y="0" width="48" height="66" rx="6" fill="white" stroke="#0b0b0b" strokeWidth="1.5" />
-                  <text x="10" y="20" fontFamily="Manrope" fontSize="14" fontWeight="800" fill="#ff6a00">A</text>
-                  <text x="30" y="50" fontFamily="Manrope" fontSize="11" fill="#ff6a00">&#9830;</text>
-                </g>
-                {/* Arrow hitting bullseye */}
-                <line x1="80" y1="280" x2="162" y2="178" stroke="#ff6a00" strokeWidth="2" strokeLinecap="round" />
-                <polygon points="162,178 158,188 168,185" fill="#ff6a00" />
-                {/* Sparkle accents */}
-                <circle cx="290" cy="130" r="3" fill="#ff6a00" opacity="0.4" />
-                <circle cx="70" cy="170" r="2.5" fill="#ffcfa3" />
-                <circle cx="260" cy="180" r="2" fill="#ff6a00" opacity="0.3" />
-                <circle cx="130" cy="290" r="3" fill="#ffcfa3" />
-              </svg>
-            </div>
-          </RevealSection>
+          {/* Right side full-height image */}
+<div
+  className="hidden lg:block"
+  style={{
+    position: "absolute",
+    top: 0,
+    right: 0,
+    height: "100%",
+    width: "45%",
+  }}
+>
+  <img
+    src={chessImage}
+    alt="Strategy"
+    style={{
+      width: "100%",
+      height: "100%",
+      objectFit: "cover",
+      objectPosition: "center",
+    }}
+  />
+</div>
         </div>
 
         {/* Center-aligned closing */}
