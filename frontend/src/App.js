@@ -328,7 +328,10 @@ function PhilosophySection() {
   style={{ background: '#fafafa', position: 'relative', overflow: 'hidden' }}
 >
       <div className="container-main">
-        <div className="flex flex-col lg:flex-row items-start gap-16 lg:gap-24">
+        <div 
+          className="flex flex-col lg:flex-row items-start gap-16"
+          style={{ position: "relative" }}
+        >
           {/* Text content */}
           <div className="flex-1 max-w-xl" style={{ width: "55%" }}>
             <RevealSection>
@@ -378,9 +381,11 @@ function PhilosophySection() {
           <div
             className="hidden lg:block"
             style={{
-              position: "relative",
+              position: "absolute",
+              top: 0,
+              right: "calc((100vw - 1200px) / -2)",
+              width: "45vw",
               height: "100%",
-              width: "45%",
             }}
           >
             <img
@@ -390,7 +395,6 @@ function PhilosophySection() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
-                objectPosition: "center",
               }}
             />
           </div>
