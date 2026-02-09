@@ -376,27 +376,25 @@ function PhilosophySection() {
           </div>
 
           {/* Right side full-height image */}
-<div
-  className="hidden lg:block"
-  style={{
-    position: "absolute",
-    top: 0,
-    right: 0,
-    height: "100%",
-    width: "45%",
-  }}
->
-  <img
-    src={chessImage}
-    alt="Strategy"
-    style={{
-      width: "100%",
-      height: "100%",
-      objectFit: "cover",
-      objectPosition: "center",
-    }}
-  />
-</div>
+          <div
+            className="hidden lg:block"
+            style={{
+              position: "relative",
+              height: "100%",
+              width: "45%",
+            }}
+          >
+            <img
+              src={chessImage}
+              alt="Strategy"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                objectPosition: "center",
+              }}
+            />
+          </div>
         </div>
 
         {/* Center-aligned closing */}
