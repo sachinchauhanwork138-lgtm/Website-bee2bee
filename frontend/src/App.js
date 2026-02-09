@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from "react";
 import "@/App.css";
-import chessImage from "./assets/pexels-pixabay-163427.jpg";
 import {
   ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
   Target, TrendingUp, Zap, FileText, BarChart3, CalendarDays,
@@ -385,7 +384,7 @@ function PhilosophySection() {
             }}
           >
             <img
-              src={chessImage}
+              src="/pexels-pixabay-163427.jpg"
               alt="Strategy"
               style={{
                 width: "100%",
