@@ -1,1 +1,0 @@
-<div style={{ position: 'relative' }}>  <PhilosophySection>    <div style={{ position: 'absolute', right: 0, top: 0, width: '50vw', height: '100%' }}>      <img src="your_image_source_here" alt="Philosophy" />    </div>    {/* Other contents of PhilosophySection */}  </PhilosophySection></div>
