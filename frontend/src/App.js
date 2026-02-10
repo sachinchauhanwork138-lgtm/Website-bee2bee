@@ -327,6 +327,28 @@ function PhilosophySection() {
   className="section-padding" 
   style={{ background: '#fafafa', position: 'relative', overflow: 'hidden' }}
 >
+  {/* Right side full-height image */}
+          <div
+            className="hidden lg:block"
+            style={{
+              position: "absolute",
+              top: 0,
+              right: "calc((100vw - 1200px) / -2)",
+              width: "45vw",
+              height: "100%",
+            }}
+          >
+            <img
+              src="/pexels-pixabay-163427.jpg"
+              alt="Strategy"
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+              }}
+            />
+          </div>
+              
       <div className="container-main">
         <div 
           className="flex flex-col lg:flex-row items-start gap-16"
@@ -377,27 +399,7 @@ function PhilosophySection() {
             </RevealSection>
           </div>
 
-          {/* Right side full-height image */}
-          <div
-            className="hidden lg:block"
-            style={{
-              position: "absolute",
-              top: 0,
-              right: "calc((100vw - 1200px) / -2)",
-              width: "45vw",
-              height: "100%",
-            }}
-          >
-            <img
-              src="/pexels-pixabay-163427.jpg"
-              alt="Strategy"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </div>
+          
         </div>
 
         {/* Center-aligned closing */}
