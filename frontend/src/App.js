@@ -332,9 +332,10 @@ function PhilosophySection() {
             className="hidden lg:block"
             style={{
               position: "absolute",
-              top: 0,
-              right: "calc((100vw - 1200px) / -2)",
-              width: "45vw",
+              top: "140px",
+              right: 0,
+              width: "55vw",
+              bottom: "160px",
               height: "100%",
             }}
           >
@@ -345,11 +346,12 @@ function PhilosophySection() {
                 width: "100%",
                 height: "100%",
                 objectFit: "cover",
+                objectPosition: "center",
               }}
             />
           </div>
               
-      <div className="container-main">
+      <div className="container-main" id="philosophy-content">
         <div 
           className="flex flex-col lg:flex-row items-start gap-16"
           style={{ position: "relative" }}
@@ -404,7 +406,7 @@ function PhilosophySection() {
 
         {/* Center-aligned closing */}
         <RevealSection delay={4}>
-          <div className="mt-16 pt-10" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', textAlign: 'center' }}>
+          <div className="mt-16 pt-10" id="philosophy-divider" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', textAlign: 'center' }}>
             <p className="font-heading" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', color: '#6b6b6b', lineHeight: 1.8 }}>
               Not noise. Not vanity.<br />
               <span style={{ color: '#0b0b0b', fontWeight: 800, fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)' }}>Real growth.</span>
