@@ -336,7 +336,6 @@ function PhilosophySection() {
               right: 0,
               width: "55vw",
               bottom: "160px",
-              height: "100%",
             }}
           >
             <img
@@ -344,6 +343,7 @@ function PhilosophySection() {
               alt="Strategy"
               style={{
                 width: "100%",
+                height: "100%",
                 objectFit: "cover",
                 objectPosition: "center",
               }}
