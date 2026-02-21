@@ -335,7 +335,7 @@ function PhilosophySection() {
               top: "0",
               right: 0,
               width: "50%",
-              bottom: "280px",
+              bottom: "260px",
             }}
           >
             <img
