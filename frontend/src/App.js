@@ -334,8 +334,8 @@ function PhilosophySection() {
               position: "absolute",
               top: "0",
               right: 0,
-              width: "40%",
-              bottom: "232px",
+              width: "45%",
+              bottom: "240px",
             }}
           >
             <img
