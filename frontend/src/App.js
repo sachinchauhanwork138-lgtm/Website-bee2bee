@@ -325,17 +325,17 @@ function PhilosophySection() {
     <section 
   data-testid="philosophy-section" 
   className="section-padding" 
-  style={{ background: '#fafafa', position: 'relative', overflow: 'hidden' }}
+  style={{ background: '#fafafa', position: 'relative', }}
 >
   {/* Right side full-height image */}
           <div
             className="hidden lg:block"
             style={{
               position: "absolute",
-              top: "140px",
+              top: "0",
               right: 0,
-              width: "55vw",
-              bottom: "160px",
+              width: "40%",
+              bottom: "232px",
             }}
           >
             <img
