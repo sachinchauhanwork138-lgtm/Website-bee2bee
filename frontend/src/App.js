@@ -901,6 +901,7 @@ function Footer() {
         <div className="flex items-center gap-5">
           <a href="www.linkedin.com/in/chauhan-sachin99" data-testid="social-linkedin" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="LinkedIn">
             <Linkedin size={18} />
+          </a>
           <a href="mailto:chauhansachin712036@gmail.com" data-testid="social-mail" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Email">
             <Mail size={18} />
           </a>
