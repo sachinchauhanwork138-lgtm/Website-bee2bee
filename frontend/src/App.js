@@ -481,7 +481,7 @@ function ExperienceSection() {
   const roles = [
     {
       company: "EHNOTE Inc",
-      role: "Marketing Lead",
+      role: "Marketing & Sales Lead",
       period: "Nov 2023 \u2013 Present",
       description: "Full-cycle marketing leadership. Built demand generation systems, positioning strategy, inbound pipeline, and revenue growth programs.",
       tags: ["Demand Gen", "Strategy", "Pipeline", "Leadership"],
@@ -489,7 +489,7 @@ function ExperienceSection() {
     },
     {
       company: "The Global Associates",
-      role: "Sr. Copywriter / Account Manager",
+      role: "Sr. Copywriter / AM",
       period: "Dec 2022 \u2013 Nov 2023",
       description: "Led B2B demand generation for SaaS clients. Managed email campaigns, LinkedIn outreach, outbound pipeline creation, and client growth strategy.",
       tags: ["B2B SaaS", "Email", "LinkedIn", "Outbound"],
