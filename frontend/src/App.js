@@ -431,7 +431,7 @@ function ExpertiseSection() {
     { name: "MarTech & Automation", icon: Settings, color: "#e85d00" },
     { name: "Business Strategy", icon: Compass, color: "#ff6a00" },
     { name: "Graphic Design", icon: Palette, color: "#e85d00" },
-    { name: "HTML & CSS", icon: Code, color: "#ff6a00" },
+    { name: "Vibe Coding", icon: Code, color: "#ff6a00" },
   ];
 
   return (
