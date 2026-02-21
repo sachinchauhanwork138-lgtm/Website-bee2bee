@@ -335,7 +335,7 @@ function PhilosophySection() {
               top: "0",
               right: 0,
               width: "50%",
-              bottom: "260px",
+              bottom: "259px",
             }}
           >
             <img
@@ -866,11 +866,11 @@ function ClosingSection() {
                     Get in touch
                   </p>
                   <p className="font-body mt-2" style={{ color: '#6b6b6b', fontSize: '0.85rem', lineHeight: 1.6 }}>
-                    Paste your HubSpot form embed code here to replace this placeholder
+                    Form to be added yet
                   </p>
                   <div className="mt-6" style={{ padding: '1rem', background: 'rgba(255,106,0,0.04)', borderRadius: '12px', border: '1px dashed rgba(255,106,0,0.2)' }}>
                     <p className="font-body" style={{ color: '#999', fontSize: '0.8rem' }}>
-                      HubSpot CRM form will appear here
+                      Form CTA
                     </p>
                   </div>
                 </div>
@@ -899,13 +899,9 @@ function Footer() {
         </div>
 
         <div className="flex items-center gap-5">
-          <a href="#" data-testid="social-linkedin" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="LinkedIn">
+          <a href="www.linkedin.com/in/chauhan-sachin99" data-testid="social-linkedin" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="LinkedIn">
             <Linkedin size={18} />
-          </a>
-          <a href="#" data-testid="social-twitter" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Twitter">
-            <Twitter size={18} />
-          </a>
-          <a href="mailto:hello@bee2bee.com" data-testid="social-mail" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Email">
+          <a href="mailto:chauhansachin712036@gmail.com" data-testid="social-mail" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Email">
             <Mail size={18} />
           </a>
         </div>
