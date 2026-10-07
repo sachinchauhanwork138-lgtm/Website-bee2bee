@@ -251,21 +251,20 @@ function HeroSection() {
           </div>
 
           <div className="hero-avatar flex-shrink-0" data-testid="hero-avatar">
-            <div
-              style={{
-                width: 'clamp(260px, 28vw, 380px)',
-                height: 'clamp(260px, 28vw, 380px)',
-                borderRadius: '30% 70% 70% 30% / 30% 30% 70% 70%',
-                overflow: 'hidden',
-                background: '#fafafa',
-                border: '3px solid rgba(255,106,0,0.1)',
-                boxShadow: '0 30px 80px rgba(0,0,0,0.08)',
-              }}
-            >
+            <div className="hero-portrait-stage">
+              <div className="hero-portrait-frame" aria-hidden="true" />
+              <div className="hero-portrait-crop">
+                <img
+                  src={PROFILE_IMG}
+                  alt=""
+                  className="hero-portrait-image hero-portrait-image-base"
+                  aria-hidden="true"
+                />
+              </div>
               <img
                 src={PROFILE_IMG}
                 alt="Sachin - B2B Marketing Specialist"
-                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                className="hero-portrait-image hero-portrait-popout"
                 data-testid="hero-profile-image"
               />
             </div>
