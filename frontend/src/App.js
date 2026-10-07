@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "@/App.css";
+import profileImg from "./assets/Hero Section Cutout.png";
 import {
   ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
   Target, TrendingUp, Zap, FileText, BarChart3, CalendarDays,
@@ -9,7 +10,7 @@ import {
   LayoutDashboard, Globe, LineChart, MessageSquare, Database, Workflow
 } from "lucide-react";
 
-const PROFILE_IMG = "https://customer-assets.emergentagent.com/job_marketing-leverage/artifacts/8vav0lz0_ChatGPT%20Image%20Oct%2020%2C%202025%20at%2011_16_56%20PM.png";
+const PROFILE_IMG = profileImg;
 const LOGO_IMG = "https://customer-assets.emergentagent.com/job_marketing-leverage/artifacts/qqxly645_ChatGPT%20Image%20Feb%206%2C%202026%2C%2004_56_18%20PM.png";
 
 /* ─── useInView Hook ─── */
