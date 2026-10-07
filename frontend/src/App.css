@@ -726,3 +726,91 @@
   z-index: 200;
   transition: width 0.1s linear;
 }
+
+
+/* Hero portrait: crop the lower body into the angular frame while allowing
+   the head and surrounding orange artwork to break out above it. */
+.hero-avatar {
+  overflow: visible;
+}
+
+.hero-portrait-stage {
+  position: relative;
+  width: clamp(300px, 34vw, 470px);
+  height: clamp(330px, 38vw, 520px);
+  overflow: visible;
+  isolation: isolate;
+}
+
+.hero-portrait-frame {
+  position: absolute;
+  z-index: 0;
+  left: 4%;
+  right: 2%;
+  top: 25%;
+  bottom: 2%;
+  background: linear-gradient(145deg, rgba(255, 106, 0, 0.10), rgba(255, 106, 0, 0.025));
+  border: 2px solid rgba(255, 106, 0, 0.18);
+  clip-path: polygon(10% 8%, 96% 0, 88% 92%, 8% 100%, 0 28%);
+  filter: drop-shadow(0 26px 38px rgba(0, 0, 0, 0.08));
+}
+
+.hero-portrait-crop {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  clip-path: polygon(8% 31%, 97% 24%, 89% 96%, 8% 100%, 0 47%);
+}
+
+.hero-portrait-image {
+  position: absolute;
+  width: 116%;
+  height: auto;
+  max-width: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero-portrait-image-base {
+  z-index: 1;
+}
+
+.hero-portrait-popout {
+  z-index: 3;
+  /* Only reveal the upper portion on this layer. It sits above the frame,
+     making the head + orange illustrations visibly pop out. */
+  clip-path: polygon(0 0, 100% 0, 100% 57%, 0 57%);
+  filter: drop-shadow(0 16px 22px rgba(0, 0, 0, 0.10));
+}
+
+@media (max-width: 1023px) {
+  .hero-portrait-stage {
+    width: min(88vw, 430px);
+    height: min(98vw, 475px);
+    margin-top: 0.5rem;
+  }
+
+  .hero-portrait-image {
+    width: 114%;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-portrait-stage {
+    width: min(92vw, 360px);
+    height: min(102vw, 400px);
+  }
+
+  .hero-portrait-frame {
+    top: 27%;
+  }
+
+  .hero-portrait-popout {
+    clip-path: polygon(0 0, 100% 0, 100% 59%, 0 59%);
+  }
+}
