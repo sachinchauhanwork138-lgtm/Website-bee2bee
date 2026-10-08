@@ -829,31 +829,18 @@ function ClosingSection() {
               </div>
             </RevealSection>
 
-            <RevealSection delay={3}>
-              <div className="mt-10">
-                {/* HubSpot Form Placeholder */}
-              </div>
-            </RevealSection>
           </div>
 
-          {/* Right: HubSpot Form */}
+          {/* Right: Direct contact details */}
           <div className="flex-1 w-full">
             <RevealSection delay={2}>
-              <div className="hubspot-form-container" data-testid="hubspot-form-container">
-                <div style={{ textAlign: 'center', width: '100%' }}>
-                  <div style={{ marginBottom: '1rem' }}>
-                    <Mail size={32} style={{ color: '#ff6a00', margin: '0 auto' }} />
-                  </div>
-                  <p className="font-heading" style={{ color: '#0b0b0b', fontSize: '1.05rem', fontWeight: 700 }}>
-                    Get in touch
-                  </p>
-                  <p className="font-body mt-2" style={{ color: '#6b6b6b', fontSize: '0.85rem', lineHeight: 1.6 }}>
-                    Form to be added yet
-                  </p>
-                  <div className="mt-6" style={{ padding: '1rem', background: 'rgba(255,106,0,0.04)', borderRadius: '12px', border: '1px dashed rgba(255,106,0,0.2)' }}>
-                    <p className="font-body" style={{ color: '#999', fontSize: '0.8rem' }}>
-                      Form CTA
-                    </p>
+              <div className="hubspot-form-container" data-testid="contact-details" style={{ textAlign: 'left' }}>
+                <div style={{ width: '100%' }}>
+                  <h3 className="font-heading" style={{ color: '#0b0b0b', fontSize: '1.25rem', fontWeight: 800, marginBottom: '1.5rem' }}>Get in touch</h3>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', overflowWrap: 'anywhere' }}>
+                    <a href="mailto:sachinchauhan.work138@gmail.com" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', color: '#0b0b0b', textDecoration: 'none' }}><Mail size={22} style={{ color: '#ff6a00', flexShrink: 0 }} /><span>sachinchauhan.work138@gmail.com</span></a>
+                    <a href="tel:+916360652784" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', color: '#0b0b0b', textDecoration: 'none' }}><span style={{ color: '#ff6a00', fontWeight: 800, fontSize: '1.2rem' }}>☎</span><span>+91 6360652784</span></a>
+                    <a href="https://www.linkedin.com/in/chauhan-sachin99" target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.85rem', color: '#0b0b0b', textDecoration: 'none' }}><Linkedin size={22} style={{ color: '#ff6a00', flexShrink: 0 }} /><span>linkedin.com/in/chauhan-sachin99</span></a>
                   </div>
                 </div>
               </div>
@@ -878,10 +865,10 @@ function Footer() {
         </div>
 
         <div className="flex items-center gap-5">
-          <a href="www.linkedin.com/in/chauhan-sachin99" data-testid="social-linkedin" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="LinkedIn">
+          <a href="https://www.linkedin.com/in/chauhan-sachin99" data-testid="social-linkedin" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="LinkedIn">
             <Linkedin size={18} />
           </a>
-          <a href="mailto:chauhansachin712036@gmail.com" data-testid="social-mail" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Email">
+          <a href="mailto:sachinchauhan.work138@gmail.com" data-testid="social-mail" style={{ color: '#6b6b6b', transition: 'color 0.3s ease' }} title="Email">
             <Mail size={18} />
           </a>
         </div>
