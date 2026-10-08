@@ -251,23 +251,7 @@ function HeroSection() {
           </div>
 
           <div className="hero-avatar flex-shrink-0" data-testid="hero-avatar">
-            <div className="hero-portrait-stage">
-              <div className="hero-portrait-frame" aria-hidden="true" />
-              <div className="hero-portrait-crop">
-                <img
-                  src={PROFILE_IMG}
-                  alt=""
-                  className="hero-portrait-image hero-portrait-image-base"
-                  aria-hidden="true"
-                />
-              </div>
-              <img
-                src={PROFILE_IMG}
-                alt="Sachin - B2B Marketing Specialist"
-                className="hero-portrait-image hero-portrait-popout"
-                data-testid="hero-profile-image"
-              />
-            </div>
+            <img src={PROFILE_IMG} alt="Sachin - B2B Marketing Specialist" className="hero-portrait-clean" data-testid="hero-profile-image" />
           </div>
         </div>
       </div>
