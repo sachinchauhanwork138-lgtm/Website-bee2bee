@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 
 const PROFILE_IMG = profileImg;
-const LOGO_IMG = "https://customer-assets.emergentagent.com/job_marketing-leverage/artifacts/qqxly645_ChatGPT%20Image%20Feb%206%2C%202026%2C%2004_56_18%20PM.png";
 
 /* ─── useInView Hook ─── */
 function useInView(options = {}) {
@@ -129,8 +128,7 @@ function Navigation() {
             style={{ color: '#0b0b0b', textDecoration: 'none' }}
             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
-            <img src={LOGO_IMG} alt="bee2bee" style={{ height: '40px', width: '40px', objectFit: 'contain', borderRadius: '8px' }} />
-            <span className="ml-2">bee<span style={{ color: '#ff6a00' }}>2</span>bee</span>
+            <span style={{ color: '#ff6a00', fontWeight: 800 }}>Sachin.</span>
           </a>
 
           <div className="hidden md:flex items-center gap-2" data-testid="desktop-nav-links">
@@ -873,10 +871,7 @@ function Footer() {
     <footer data-testid="footer" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', padding: '3rem 0' }}>
       <div className="container-main flex flex-col md:flex-row items-center justify-between gap-4">
         <div className="flex items-center">
-          <img src={LOGO_IMG} alt="bee2bee" style={{ height: '32px', width: '32px', objectFit: 'contain', borderRadius: '6px' }} />
-          <span className="font-heading ml-2" style={{ fontWeight: 800, fontSize: '1.1rem', color: '#0b0b0b' }}>
-            bee<span style={{ color: '#ff6a00' }}>2</span>bee
-          </span>
+          <span className="font-heading" style={{ fontWeight: 800, fontSize: '1.1rem', color: '#ff6a00' }}>Sachin.</span>
           <span className="font-body ml-4" style={{ color: '#6b6b6b', fontSize: '0.8rem' }}>
             Sachin | B2B Marketing Specialist
           </span>
