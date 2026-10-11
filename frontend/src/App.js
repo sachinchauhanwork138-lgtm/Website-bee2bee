@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import "@/App.css";
+import PortfolioPage from "./PortfolioPage";
 import profileImg from "./assets/Hero Section Cutout.png";
 import {
   ArrowRight, ArrowUpRight, Menu, X, Linkedin, Twitter, Mail,
@@ -70,6 +71,7 @@ function RevealSection({ children, className = "", delay = 0 }) {
 
 /* ─── Navigation ─── */
 function Navigation() {
+  const isPortfolioPage = window.location.pathname.replace(/\\/$/, "") === "/portfolio";
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -95,15 +97,19 @@ function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: "Home", href: "#top", section: "home" },
-    { label: "My Expertise", href: "#expertise", section: "expertise" },
-    { label: "My Portfolio", href: "#work", section: "work" },
+    { label: "Home", href: "/", section: "home" },
+    { label: "My Expertise", href: "/#expertise", section: "expertise" },
+    { label: "My Portfolio", href: "/portfolio", section: "work" },
   ];
 
   const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileOpen(false);
-    if (href === "#top") {
+    if (href.startsWith("/")) {
+      if (href === "/" && !isPortfolioPage) window.scrollTo({ top: 0, behavior: "smooth" });
+      else if (href.startsWith("/#") && !isPortfolioPage) document.querySelector(href.substring(1))?.scrollIntoView({ behavior: "smooth" });
+      else window.location.assign(href);
+    } else if (href === "#top") {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
       const el = document.querySelector(href);
@@ -126,7 +132,7 @@ function Navigation() {
             data-testid="logo-link"
             className="font-heading text-xl font-800 tracking-tight flex items-center"
             style={{ color: '#0b0b0b', textDecoration: 'none' }}
-            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+            onClick={(e) => { e.preventDefault(); if (isPortfolioPage) window.location.assign('/'); else window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             <span style={{ color: '#ff6a00', fontWeight: 800 }}>Sachin.</span>
           </a>
@@ -237,12 +243,12 @@ function HeroSection() {
             </p>
 
             <div className="hero-buttons flex flex-wrap gap-4 mt-10" data-testid="hero-buttons">
-              <a href="#work" className="btn-primary" data-testid="hero-view-work-btn"
+              <a href="/#expertise" className="btn-primary" data-testid="hero-view-work-btn"
                 onClick={(e) => { e.preventDefault(); document.querySelector('#work')?.scrollIntoView({ behavior: 'smooth' }); }}>
                 My Expertise <ArrowRight size={16} className="ml-2" />
               </a>
-              <a href="#experience" className="btn-secondary" data-testid="hero-experience-btn"
-                onClick={(e) => { e.preventDefault(); document.querySelector('#experience')?.scrollIntoView({ behavior: 'smooth' }); }}>
+              <a href="/portfolio" className="btn-secondary" data-testid="hero-experience-btn"
+                onClick={(e) => { e.preventDefault(); window.location.assign('/portfolio'); }}>
                 My Portfolio
               </a>
             </div>
@@ -861,6 +867,15 @@ function ScrollProgress() {
 
 /* ─── Main App ─── */
 function App() {
+  const isPortfolioPage = window.location.pathname.replace(/\\/$/, "") === "/portfolio";
+  if (isPortfolioPage) return (
+    <div style={{ background: "#ffffff" }}>
+      <ScrollProgress />
+      <Navigation />
+      <PortfolioPage />
+      <Footer />
+    </div>
+  );
   return (
     <div style={{ background: '#ffffff' }}>
       <ScrollProgress />
