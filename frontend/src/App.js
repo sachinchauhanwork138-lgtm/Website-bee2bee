@@ -309,30 +309,6 @@ function PhilosophySection() {
   className="section-padding" 
   style={{ background: '#fafafa', position: 'relative', }}
 >
-  {/* Right side full-height image */}
-          <div
-            className="hidden lg:block"
-            style={{
-              position: "absolute",
-              top: "0",
-              right: 0,
-              width: "50%",
-              bottom: "259px",
-            }}
-          >
-            <img
-              src="/marketing_revenue_infographic_1200x1000.png"
-              alt="Marketing channels driving traffic, leads, pipeline, customers, and revenue growth"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "contain",
-                objectPosition: "center",
-                backgroundColor: "#fafafa",
-              }}
-            />
-          </div>
-              
       <div className="container-main" id="philosophy-content">
         <div 
           className="flex flex-col lg:flex-row items-start gap-16"
@@ -382,19 +358,14 @@ function PhilosophySection() {
               </ul>
             </RevealSection>
           </div>
-
-          
-        </div>
-
-        {/* Center-aligned closing */}
-        <RevealSection delay={4}>
-          <div className="mt-16 pt-10" id="philosophy-divider" style={{ borderTop: '1px solid rgba(0,0,0,0.06)', textAlign: 'center' }}>
-            <p className="font-heading" style={{ fontSize: 'clamp(1.1rem, 2vw, 1.4rem)', color: '#6b6b6b', lineHeight: 1.8 }}>
-              Not noise. Not vanity.<br />
-              <span style={{ color: '#0b0b0b', fontWeight: 800, fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)' }}>Real growth.</span>
-            </p>
+          <div className="flex-1 w-full lg:w-1/2" style={{ alignSelf: 'center' }}>
+            <img
+              src="/marketing_revenue_infographic_1200x1000.png"
+              alt="Marketing channels driving traffic, leads, pipeline, customers, and revenue growth"
+              style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'contain' }}
+            />
           </div>
-        </RevealSection>
+        </div>
       </div>
     </section>
   );
