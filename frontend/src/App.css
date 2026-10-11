@@ -733,3 +733,16 @@
 .hero-avatar { flex-shrink: 0; width: min(100%, 470px); overflow: visible; }
 .hero-portrait-clean { display: block; width: 100%; height: auto; object-fit: contain; max-width: 100%; filter: drop-shadow(0 16px 28px rgba(0,0,0,.08)); }
 @media (max-width: 1023px) { .hero-avatar { width: min(88vw, 420px); margin-inline: auto; } }
+
+/* Philosophy: full-bleed infographic on the right, flush with grey panel edges. */
+.philosophy-split-section { background: #fafafa; }
+.philosophy-split-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+.philosophy-split-copy { min-width: 0; padding: clamp(3rem, 6vw, 7rem) clamp(2rem, 4vw, 5rem) clamp(3rem, 6vw, 7rem) max(2rem, calc((100vw - 1280px) / 2)); display: flex; flex-direction: column; justify-content: center; }
+.philosophy-split-visual { min-width: 0; position: relative; overflow: hidden; background: #fff; }
+.philosophy-split-image { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
+@media (max-width: 1023px) {
+  .philosophy-split-layout { grid-template-columns: 1fr; }
+  .philosophy-split-copy { padding: 4rem 6vw 2rem; }
+  .philosophy-split-visual { width: 100%; }
+  .philosophy-split-image { width: 100%; height: auto; }
+}
