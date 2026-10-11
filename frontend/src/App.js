@@ -71,7 +71,7 @@ function RevealSection({ children, className = "", delay = 0 }) {
 
 /* ─── Navigation ─── */
 function Navigation() {
-  const isPortfolioPage = window.location.pathname.replace(/\\/$/, "") === "/portfolio";
+  const isPortfolioPage = ["/portfolio", "/portfolio/"].includes(window.location.pathname);
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -867,7 +867,7 @@ function ScrollProgress() {
 
 /* ─── Main App ─── */
 function App() {
-  const isPortfolioPage = window.location.pathname.replace(/\\/$/, "") === "/portfolio";
+  const isPortfolioPage = ["/portfolio", "/portfolio/"].includes(window.location.pathname);
   if (isPortfolioPage) return (
     <div style={{ background: "#ffffff" }}>
       <ScrollProgress />
