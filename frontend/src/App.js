@@ -321,13 +321,14 @@ function PhilosophySection() {
             }}
           >
             <img
-              src="/pexels-pixabay-163427.jpg"
-              alt="Strategy"
+              src="/marketing_revenue_infographic_1200x1000.png"
+              alt="Marketing channels driving traffic, leads, pipeline, customers, and revenue growth"
               style={{
                 width: "100%",
                 height: "100%",
-                objectFit: "cover",
+                objectFit: "contain",
                 objectPosition: "center",
+                backgroundColor: "#fafafa",
               }}
             />
           </div>
