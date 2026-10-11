@@ -304,18 +304,11 @@ function MetricsSection() {
 /* ─── Philosophy Section ─── */
 function PhilosophySection() {
   return (
-    <section 
-  data-testid="philosophy-section" 
-  className="section-padding" 
-  style={{ background: '#fafafa', position: 'relative', }}
->
-      <div className="container-main" id="philosophy-content">
-        <div 
-          className="flex flex-col lg:flex-row items-start gap-16"
-          style={{ position: "relative" }}
-        >
+    <section data-testid="philosophy-section" className="philosophy-split-section">
+      <div className="philosophy-split-inner" id="philosophy-content">
+        <div className="philosophy-split-layout">
           {/* Text content */}
-          <div className="flex-1 max-w-xl" style={{ width: "55%" }}>
+          <div className="philosophy-split-copy">
             <RevealSection>
               <h2
                 className="font-heading"
@@ -358,11 +351,11 @@ function PhilosophySection() {
               </ul>
             </RevealSection>
           </div>
-          <div className="flex-1 w-full lg:w-1/2" style={{ alignSelf: 'center' }}>
+          <div className="philosophy-split-visual">
             <img
               src="/marketing_revenue_infographic_1200x1000.png"
               alt="Marketing channels driving traffic, leads, pipeline, customers, and revenue growth"
-              style={{ display: 'block', width: '100%', height: 'auto', objectFit: 'contain' }}
+              className="philosophy-split-image"
             />
           </div>
         </div>
